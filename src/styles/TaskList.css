@@ -1,0 +1,90 @@
+.task-list {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 35px;
+    margin-block: 20px;
+}
+
+.task-list h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.task-list .container-button-create {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+}
+
+.task-list button {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    background-color: #28a745;
+}
+
+.loading {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.loading:after {
+    content: "";
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-out, fadeOut 0.5s 4.5s forwards;
+}
+
+.message.error {
+    background-color: #f44336;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

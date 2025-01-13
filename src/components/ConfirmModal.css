@@ -1,0 +1,83 @@
+.custom-modal-confirm {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+.custom-modal-confirm h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.custom-modal-confirm div {
+    display: flex;
+    gap: 20px;
+}
+
+.custom-modal-confirm div button {
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.custom-modal-confirm div button {
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.custom-modal-confirm div .button-yes {
+    background-color: #28a745;
+}
+
+.custom-modal-confirm div .button-yes:hover {
+    background-color: #218838;
+}
+
+.custom-modal-confirm div .button-no {
+    background-color: #DC3545;
+}
+
+.custom-modal-confirm div .button-no:hover {
+    background-color: #C82333;
+}
+
+.custom-overlay {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    animation: fadeInOverlay 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

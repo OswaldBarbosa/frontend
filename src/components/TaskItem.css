@@ -1,0 +1,88 @@
+.task-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 0.5fr 0.5fr;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    padding: 15px 30px;
+    margin-block: 10px;
+    align-items: center;
+}
+
+.task-item h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 95%;
+}
+
+.task-item p {
+    margin: 5px 0;
+    color: #666;
+    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 95%;
+}
+
+.task-item button {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    margin: 0 20px;
+}
+
+.task-item .button-edit {
+    background-color: #007bff;
+}
+
+.task-item .button-delete {
+    background-color: #dc3545;
+}
+
+@media (max-width: 768px) {
+    .task-item {
+        grid-template-columns: 1fr 2fr 1fr;
+        padding: 10px 20px;
+    }
+
+    .task-item button {
+        margin: 0 10px;
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    .task-item h3,
+    .task-item p {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .task-item {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .task-item h3 {
+        font-size: 1rem;
+    }
+
+    .task-item p {
+        font-size: 0.9rem;
+    }
+
+    .task-item button {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 0.85rem;
+    }
+}
